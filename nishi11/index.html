@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年11月度 埼玉西支店 会議議事録</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .stamp-box {
+            width: 4.5rem;
+            height: 4.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .stamp-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            padding-bottom: 2px;
+            margin-bottom: 3px;
+            width: 68%;
+            text-align: center;
+        }
+        .stamp-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .stamp-creator {
+            color: #fecaca;
+            border-color: #fca5a5;
+        }
+        .stamp-creator .stamp-label {
+            border-bottom-color: #fca5a5;
+        }
+    </style>
+</head>
+<body class="text-gray-800 min-h-screen pb-16">
+
+    <!-- 1. ヒーローヘッダー -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+            <div class="w-full lg:w-3/4">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full tracking-wider">埼玉・群馬支社 埼玉西支店</span>
+                    <span class="text-blue-100 text-sm font-medium">日時：2026年11月2日（月）10:30〜12:30</span>
+                    <span class="text-blue-100 text-sm font-medium">会場：川越オフィス / Zoom合同</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight">11月度 埼玉西支店 会議議事録</h1>
+                <p class="text-blue-100 text-sm md:text-base leading-relaxed max-w-3xl">
+                    下期部門方針「健全・安全な職場で継続的成長へ」のもと、10月度の業績詳細レビュー、各営業課の成功・反省要因の深掘り、および各委員会（展示場・MRD・JA・金融・再受注）の活動進捗と11月度リカバリー戦略・コンプライアンス徹底事項を記録した公式議事録です。
+                </p>
+                <div class="mt-4 pt-3 border-t border-white/20 text-xs text-blue-100 flex flex-wrap gap-x-4 gap-y-1">
+                    <span><strong>出席・発表者：</strong>田口支店長、保田部長、岩見部長、神野部長、鎌田課長、原田課長、関課長、長田EX、齋藤KD、菅野KD、雫石KD、千田HE、深井HE、大塚真HE、井上HE、伊藤MS、滝本HE、西川HE、若山HE、高篠HE、大籠HE、三浦HE、吉田HE、長瀬HE</span>
+                </div>
+            </div>
+
+            <!-- 捺印欄（承認：田口 / 確認：田口 / 作成：田中） -->
+            <div class="flex space-x-3 bg-white/10 p-4 rounded-xl border border-white/25 backdrop-blur-sm shrink-0 self-end lg:self-center">
+                <div class="stamp-box text-white">
+                    <span class="stamp-label">承認</span>
+                    <span class="stamp-name">田口</span>
+                </div>
+                <div class="stamp-box text-white">
+                    <span class="stamp-label">確認</span>
+                    <span class="stamp-name">田口</span>
+                </div>
+                <div class="stamp-box stamp-creator">
+                    <span class="stamp-label">作成</span>
+                    <span class="stamp-name">田中</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10 space-y-12">
+
+        <!-- 2. 重要指標・ハイライトカード（3カラム） -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- カード1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">10月度 契約棟数</span>
+                            <span class="text-xs text-gray-400">利益額達成率 128.7%</span>
+                        </div>
+                        <div class="flex items-baseline space-x-2 my-2">
+                            <span class="text-4xl font-black text-gray-900">6<span class="text-xl font-bold ml-1">棟</span></span>
+                            <span class="text-lg font-bold text-blue-600">（達成率 100%）</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-100 leading-relaxed">
+                        月間計画6棟を完全達成（利益額A 5,790万円／利益率B 18.58%）。市場開発課（3棟）と川越営業課（2棟）が牽引した一方、今後は「0棟の営業マンをなくし、より多くのメンバーが契約する体制」の構築が最優先課題。
+                    </p>
+                </div>
+
+                <!-- カード2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">法人・金融・紹介比率</span>
+                            <span class="text-xs text-gray-400">無競合での成約が中心</span>
+                        </div>
+                        <div class="flex items-baseline space-x-2 my-2">
+                            <span class="text-4xl font-black text-gray-900">83.3<span class="text-xl font-bold ml-0.5">%</span></span>
+                            <span class="text-lg font-bold text-indigo-600">（5棟 / 6棟中）</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-100 leading-relaxed">
+                        銀行紹介3棟（群馬銀行2・巣鴨信金1）、SUUMO紹介1棟、MG社内紹介1棟と紹介ルートが好調。展示場成約0棟の課題を補い、事前FAN化と上司同行御礼訪問により競合を排除した成約を実現。
+                    </p>
+                </div>
+
+                <!-- カード3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">下期部門方針・行動指針</span>
+                            <span class="text-xs text-gray-400">11月必達目標：計8棟</span>
+                        </div>
+                        <div class="my-2">
+                            <span class="text-2xl font-black text-gray-900 tracking-tight">「原点回帰・凡事徹底」</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-100 leading-relaxed">
+                        「なぜなぜ分析」による真因追及、Wインタビュー・0次来場ツールの活用、事務所整理整頓・安全運転（点検ドタキャン厳禁）・情報セキュリティの徹底を通じ、健全な職場環境と持続的成長を両立する。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 詳細分析セクション -->
+
+        <!-- セクション 1: 営業部・各課別実績レビューと11月度リカバリー戦略 -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-gray-50 px-8 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                    <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center text-sm font-bold mr-3 shrink-0">1</span>
+                    10月度 営業実績の詳細分析と11月度リカバリー戦略
+                </h2>
+                <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">報告：田口支店長・保田部長・岩見部長・各課長</span>
+            </div>
+
+            <div class="p-8 space-y-8">
+                <!-- 要約リード -->
+                <div class="bg-blue-50/60 border border-blue-100 rounded-xl p-5 text-sm text-gray-700 leading-relaxed space-y-2">
+                    <p>
+                        <strong>【支店総括・議論の核心】</strong> 10月度は支店合計で計画6棟に対し実績6棟（利益額A 5,790万円／計画4,500万円）と好スタートを切った。しかし田口支店長からは、8・9月の加算利益に頼った構造から脱却し、<strong>「販売効率0.4以上・利益率B 21%以上」</strong>を実力で達成すること、そして<strong>「1人のトップ営業が複数棟売るのではなく、より多くの営業マンが契約を挙げること（新陳代謝と底上げ）」</strong>が最重要テーマとして示された。
+                    </p>
+                    <p>
+                        また、商談時の顧客ヒアリングにおいては「なぜミサワホームを検討しているのか」「なぜ競合を選んだのか」の<strong>「なぜなぜ分析（最低2回の深掘り）」</strong>を徹底し、契約クロージングの決め手となる本質的な動機を掴むことが指示された。
+                    </p>
+                </div>
+
+                <!-- グラフ2列配置（静的インラインSVGで即時描画保証） -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- グラフ1: 課別 契約棟数推移 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">課別 契約棟数（10月計画・10月実績・11月必達目標）</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">11月は各課2棟（支店計8棟・利益8,800万円）を必達目標に設定</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- 凡例 -->
+                                <rect x="85" y="8" width="12" height="12" rx="2" fill="#CBD5E1"/>
+                                <text x="102" y="18" font-size="11" fill="#475569" font-weight="600">10月計画 (棟)</text>
+                                <rect x="200" y="8" width="12" height="12" rx="2" fill="#2563EB"/>
+                                <text x="217" y="18" font-size="11" fill="#475569" font-weight="600">10月実績 (棟)</text>
+                                <rect x="315" y="8" width="12" height="12" rx="2" fill="#4F46E5"/>
+                                <text x="332" y="18" font-size="11" fill="#475569" font-weight="600">11月必達目標 (棟)</text>
+                                <!-- グリッド -->
+                                <line x1="50" y1="45" x2="500" y2="45" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="49" text-anchor="end" font-size="11" fill="#64748B">4棟</text>
+                                <line x1="50" y1="90" x2="500" y2="90" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="94" text-anchor="end" font-size="11" fill="#64748B">3棟</text>
+                                <line x1="50" y1="135" x2="500" y2="135" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="139" text-anchor="end" font-size="11" fill="#64748B">2棟</text>
+                                <line x1="50" y1="180" x2="500" y2="180" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="184" text-anchor="end" font-size="11" fill="#64748B">1棟</text>
+                                <line x1="50" y1="225" x2="500" y2="225" stroke="#94A3B8" stroke-width="1.5"/>
+                                <text x="42" y="229" text-anchor="end" font-size="11" fill="#64748B">0棟</text>
+                                <!-- 新座営業課 (1, 1, 2) -->
+                                <rect x="69" y="180" width="22" height="45" rx="3" fill="#CBD5E1"/>
+                                <text x="80" y="174" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1</text>
+                                <rect x="95" y="180" width="22" height="45" rx="3" fill="#2563EB"/>
+                                <text x="106" y="174" text-anchor="middle" font-size="11" font-weight="700" fill="#1D4ED8">1</text>
+                                <rect x="121" y="135" width="22" height="90" rx="3" fill="#4F46E5"/>
+                                <text x="132" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">2</text>
+                                <text x="106" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">新座営業課</text>
+                                <!-- 市場開発課 (2, 3, 2) -->
+                                <rect x="182" y="135" width="22" height="90" rx="3" fill="#CBD5E1"/>
+                                <text x="193" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">2</text>
+                                <rect x="208" y="90" width="22" height="135" rx="3" fill="#2563EB"/>
+                                <text x="219" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#1D4ED8">3</text>
+                                <rect x="234" y="135" width="22" height="90" rx="3" fill="#4F46E5"/>
+                                <text x="245" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">2</text>
+                                <text x="219" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">市場開発課</text>
+                                <!-- 所沢営業課 (2, 0, 2) -->
+                                <rect x="294" y="135" width="22" height="90" rx="3" fill="#CBD5E1"/>
+                                <text x="305" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">2</text>
+                                <rect x="320" y="222" width="22" height="3" rx="1" fill="#EF4444"/>
+                                <text x="331" y="216" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">0</text>
+                                <rect x="346" y="135" width="22" height="90" rx="3" fill="#4F46E5"/>
+                                <text x="357" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">2</text>
+                                <text x="331" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">所沢営業課</text>
+                                <!-- 川越営業課 (1, 2, 2) -->
+                                <rect x="407" y="180" width="22" height="45" rx="3" fill="#CBD5E1"/>
+                                <text x="418" y="174" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">1</text>
+                                <rect x="433" y="135" width="22" height="90" rx="3" fill="#2563EB"/>
+                                <text x="444" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#1D4ED8">2</text>
+                                <rect x="459" y="135" width="22" height="90" rx="3" fill="#4F46E5"/>
+                                <text x="470" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">2</text>
+                                <text x="444" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">川越営業課</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- グラフ2: チャネル別成約内訳 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">10月度 成約6棟の資料源・チャネル構成比</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">金融機関紹介が半数を占め、展示場経由の0棟をカバー</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- ドーナツリング (r=78, C=490.09) -->
+                                <circle cx="135" cy="135" r="78" fill="none" stroke="#E2E8F0" stroke-width="28"/>
+                                <!-- 金融機関紹介 50% (245.05) -->
+                                <circle cx="135" cy="135" r="78" fill="none" stroke="#2563EB" stroke-width="28" stroke-dasharray="245.05 490.09" stroke-dashoffset="0" transform="rotate(-90 135 135)"/>
+                                <!-- SUUMO紹介 16.7% (81.68) -->
+                                <circle cx="135" cy="135" r="78" fill="none" stroke="#4F46E5" stroke-width="28" stroke-dasharray="81.68 490.09" stroke-dashoffset="-245.05" transform="rotate(-90 135 135)"/>
+                                <!-- MG社内紹介 16.7% (81.68) -->
+                                <circle cx="135" cy="135" r="78" fill="none" stroke="#10B981" stroke-width="28" stroke-dasharray="81.68 490.09" stroke-dashoffset="-326.73" transform="rotate(-90 135 135)"/>
+                                <!-- オーナー再契約 16.7% (81.68) -->
+                                <circle cx="135" cy="135" r="78" fill="none" stroke="#F59E0B" stroke-width="28" stroke-dasharray="81.68 490.09" stroke-dashoffset="-408.41" transform="rotate(-90 135 135)"/>
+                                <!-- 中央テキスト -->
+                                <text x="135" y="131" text-anchor="middle" font-size="15" font-weight="800" fill="#1E293B">合計 6棟</text>
+                                <text x="135" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">紹介系 83.3%</text>
+                                <!-- 右側凡例 -->
+                                <rect x="255" y="45" width="13" height="13" rx="3" fill="#2563EB"/>
+                                <text x="275" y="56" font-size="12" font-weight="700" fill="#1E293B">金融機関紹介：3棟 (50.0%)</text>
+                                <rect x="255" y="83" width="13" height="13" rx="3" fill="#4F46E5"/>
+                                <text x="275" y="94" font-size="12" font-weight="700" fill="#1E293B">SUUMO紹介：1棟 (16.7%)</text>
+                                <rect x="255" y="121" width="13" height="13" rx="3" fill="#10B981"/>
+                                <text x="275" y="132" font-size="12" font-weight="700" fill="#1E293B">MG社内紹介：1棟 (16.7%)</text>
+                                <rect x="255" y="159" width="13" height="13" rx="3" fill="#F59E0B"/>
+                                <text x="275" y="170" font-size="12" font-weight="700" fill="#1E293B">オーナー再契約：1棟 (16.7%)</text>
+                                <rect x="255" y="197" width="13" height="13" rx="3" fill="#CBD5E1"/>
+                                <text x="275" y="208" font-size="12" font-weight="600" fill="#64748B">展示場来場：0棟 (0.0%)</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 各課別の詳細分析グリッド（4課） -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <!-- 新座営業課 -->
+                    <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                            <h3 class="text-base font-bold text-gray-900 flex items-center">
+                                <span class="w-2.5 h-2.5 rounded-full bg-blue-600 mr-2 shrink-0"></span>新座営業課（鎌田課長）
+                            </h3>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-blue-100 text-blue-800 whitespace-nowrap">10月：1棟 / 計画1棟（達成）</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 leading-relaxed">
+                            <li><strong>10月実績・勝因：</strong>長田EXがSUUMOカウンター紹介で奥村様邸（工事5,141万円／利益率A 22.06%）を成約。他展案内→MPT→セルフライフシミュ→ランディ＆ハザードマップ活用により、<strong>土地紹介前の段階で完全FAN化と競合排除を実現</strong>したことが勝因。</li>
+                            <li><strong>課題と11月対策：</strong>リカバリー案件の不足と管理客フォローの徹底が課題。11月目標2棟（第2週：元村様／深井HE、第4週：志賀様／長田EX）に向け、毎日の管理フォロー（ゼロの日を作らない）と邸別ミーティングを強化。</li>
+                        </ul>
+                    </div>
+
+                    <!-- 市場開発課 -->
+                    <div class="border border-gray-200 rounded-xl p-6 hover:border-indigo-300 transition-colors">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                            <h3 class="text-base font-bold text-gray-900 flex items-center">
+                                <span class="w-2.5 h-2.5 rounded-full bg-indigo-600 mr-2 shrink-0"></span>市場開発課（神野部長）
+                            </h3>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-indigo-100 text-indigo-800 whitespace-nowrap">10月：3棟 / 計画2棟（+1棟）</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 leading-relaxed">
+                            <li><strong>10月実績・勝因：</strong>3棟すべて金融機関紹介から成約（伊藤MS：群馬銀行館林支店紹介で赤城車体工業A・B棟／計5,957万円、大塚真HE：巣鴨信金紹介で星野様賃貸／5,055万円）。</li>
+                            <li><strong>成功事例の深掘り（赤城車体工業様）：</strong>当初は「高級車6台が入るガレージのみ（予算1〜2千万円）」の要望だったが、市街化調整区域のためガレージ単体の建築不可と判明。<strong>「1K居宅＋付属ガレージ2棟」の建築計画へ転換し、総額約7,000万円規模で契約獲得</strong>。アポ間の密な連絡（ザイオンス効果）と銀行担当者の強い後押しが決め手。</li>
+                            <li><strong>11月対策：</strong>目標2棟（第4週：肥沼邸／井上HE、比留間邸／雫石KD、第5週：鈴木邸／井上HE）。終活セミナー・フェスタ活用と南エリアへの活動集中を実施。</li>
+                        </ul>
+                    </div>
+
+                    <!-- 所沢営業課 -->
+                    <div class="border border-gray-200 rounded-xl p-6 hover:border-rose-300 transition-colors">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                            <h3 class="text-base font-bold text-gray-900 flex items-center">
+                                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 mr-2 shrink-0"></span>所沢営業課（原田課長）
+                            </h3>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-rose-100 text-rose-800 whitespace-nowrap">10月：0棟 / 計画2棟（▲2棟）</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 leading-relaxed">
+                            <li><strong>10月反省・真因：</strong>7〜9月の契約クロージングに注力しすぎた反動で、10〜12月の中期見込み客フォローが疎かになり見込み客が枯渇。</li>
+                            <li><strong>好転の兆しと11月対策：</strong>MRD新規提携を単月6社獲得し、情報連絡会も集客貢献。またライフルホームズとの情報交換を踏まえ「資料請求翌日訪問・1,000万円CP訪問」を実践し、若山HEが土日4件訪問から1件商談化に成功。11月目標2棟（第4週：永峯様／菅野KD、第5週：高野様／菅野KD、赤木様／原田課長）の必達を期す。</li>
+                        </ul>
+                    </div>
+
+                    <!-- 川越営業課 -->
+                    <div class="border border-gray-200 rounded-xl p-6 hover:border-emerald-300 transition-colors">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                            <h3 class="text-base font-bold text-gray-900 flex items-center">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 mr-2 shrink-0"></span>川越営業課（関課長）
+                            </h3>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 whitespace-nowrap">10月：2棟 / 計画1棟（+1棟）</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 leading-relaxed">
+                            <li><strong>10月実績・勝因：</strong>神田測量設計様（齋藤KD／工事6,330万円・利益率B 21.04%）と渡邊拓也様邸（関課長／MG社内紹介）の2棟を受注。渡邊様邸は財務課・角澤さんの同期友人紹介で、部署を超えた粘り強いフォローが結実。</li>
+                            <li><strong>課題と11月対策：</strong>実質再契約案件が含まれるため、新規顧客からの受注挽回が急務。11月目標2棟（第3週：前田様／齋藤KD、相沢様／大籠HE、第4週：石川様・福田様／三浦HE）に向け、1人3件のアポ確保と早期申込金訴求を徹底。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション 2: 各委員会の活動実績と11月度重点アクション -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-gray-50 px-8 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                    <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center text-sm font-bold mr-3 shrink-0">2</span>
+                    各委員会の進捗分析と11月度重点施策（集客・法人・再受注）
+                </h2>
+                <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">報告：関課長・岩見部長・神野部長・齋藤KD・保田部長</span>
+            </div>
+
+            <div class="p-8 space-y-8">
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    下期の最重要戦略である<strong>「7SAUCE（展示場・MRD・BK・JA・TAX・再受注・スーモ他）の多角化」</strong>に向け、各委員会から10月度の定量実績と11月度の具体策が報告された。展示場の新規来場数は前年比171.7%と大幅に伸びているものの成約に繋がっておらず、<strong>「着座率・90分滞留率・オプトイン率」の改善</strong>と、好調な<strong>「金融・MRD・JAルートからの連れ出し強化」</strong>が両輪となる。
+                </p>
+
+                <!-- グラフ2列配置（静的インラインSVG） -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- グラフ3: 展示場KPI達成状況 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">10月度 埼玉西支店 展示場KPI実績 vs 下期目標</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">新規来場79組（前年比171.7%）に対し、着座率(25.3%)・90分滞留率(6.3%)が課題</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- 凡例 -->
+                                <rect x="145" y="8" width="12" height="12" rx="2" fill="#3B82F6"/>
+                                <text x="162" y="18" font-size="11" fill="#475569" font-weight="600">10月実績 (%)</text>
+                                <rect x="275" y="8" width="12" height="12" rx="2" fill="#CBD5E1"/>
+                                <text x="292" y="18" font-size="11" fill="#475569" font-weight="600">下期目標 (%)</text>
+                                <!-- グリッド (max 80%, 1%=2.25px) -->
+                                <line x1="50" y1="45" x2="500" y2="45" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="49" text-anchor="end" font-size="11" fill="#64748B">80%</text>
+                                <line x1="50" y1="90" x2="500" y2="90" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="94" text-anchor="end" font-size="11" fill="#64748B">60%</text>
+                                <line x1="50" y1="135" x2="500" y2="135" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="139" text-anchor="end" font-size="11" fill="#64748B">40%</text>
+                                <line x1="50" y1="180" x2="500" y2="180" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="184" text-anchor="end" font-size="11" fill="#64748B">20%</text>
+                                <line x1="50" y1="225" x2="500" y2="225" stroke="#94A3B8" stroke-width="1.5"/>
+                                <text x="42" y="229" text-anchor="end" font-size="11" fill="#64748B">0%</text>
+                                <!-- 着座率 (25.3 vs 50.0) -->
+                                <rect x="75" y="168.1" width="28" height="56.9" rx="3" fill="#3B82F6"/>
+                                <text x="89" y="162" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4ED8">25.3%</text>
+                                <rect x="109" y="112.5" width="28" height="112.5" rx="3" fill="#CBD5E1"/>
+                                <text x="123" y="106" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">50.0%</text>
+                                <text x="106" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">着座率</text>
+                                <!-- 90分滞留率 (6.3 vs 30.0) -->
+                                <rect x="188" y="210.8" width="28" height="14.2" rx="3" fill="#3B82F6"/>
+                                <text x="202" y="204" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4ED8">6.3%</text>
+                                <rect x="222" y="157.5" width="28" height="67.5" rx="3" fill="#CBD5E1"/>
+                                <text x="236" y="151" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">30.0%</text>
+                                <text x="219" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">90分滞留率</text>
+                                <!-- 次回アポ率 (6.3 vs 20.0) -->
+                                <rect x="300" y="210.8" width="28" height="14.2" rx="3" fill="#3B82F6"/>
+                                <text x="314" y="204" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4ED8">6.3%</text>
+                                <rect x="334" y="180.0" width="28" height="45.0" rx="3" fill="#CBD5E1"/>
+                                <text x="348" y="174" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">20.0%</text>
+                                <text x="331" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">次回アポ率</text>
+                                <!-- オプトイン率 (58.2 vs 70.0) -->
+                                <rect x="413" y="94.0" width="28" height="131.0" rx="3" fill="#3B82F6"/>
+                                <text x="427" y="88" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4ED8">58.2%</text>
+                                <rect x="447" y="67.5" width="28" height="157.5" rx="3" fill="#CBD5E1"/>
+                                <text x="461" y="61" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">70.0%</text>
+                                <text x="444" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E293B">オプトイン率</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- グラフ4: MRD・JA・金融 10月行動量達成率 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">各課別 10月度 MRD訪問目標達成率（目標：15社/人）</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">市場開発課が106.7%（80件）と牽引。11月はポスター＆業者リストを展開</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- グリッド (max 120%, 1%=1.5px) -->
+                                <line x1="50" y1="45" x2="500" y2="45" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="49" text-anchor="end" font-size="11" fill="#64748B">120%</text>
+                                <line x1="50" y1="75" x2="500" y2="75" stroke="#10B981" stroke-width="1" stroke-dasharray="4 3"/>
+                                <text x="42" y="79" text-anchor="end" font-size="10" font-weight="700" fill="#059669">100%</text>
+                                <line x1="50" y1="90" x2="500" y2="90" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="94" text-anchor="end" font-size="11" fill="#64748B">90%</text>
+                                <line x1="50" y1="135" x2="500" y2="135" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="139" text-anchor="end" font-size="11" fill="#64748B">60%</text>
+                                <line x1="50" y1="180" x2="500" y2="180" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="184" text-anchor="end" font-size="11" fill="#64748B">30%</text>
+                                <line x1="50" y1="225" x2="500" y2="225" stroke="#94A3B8" stroke-width="1.5"/>
+                                <text x="42" y="229" text-anchor="end" font-size="11" fill="#64748B">0%</text>
+                                <!-- 新座 (76.7%) -->
+                                <rect x="83" y="110" width="46" height="115" rx="4" fill="#60A5FA"/>
+                                <text x="106" y="103" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E293B">76.7%</text>
+                                <text x="106" y="246" text-anchor="middle" font-size="11" font-weight="700" fill="#1E293B">新座 (46/60)</text>
+                                <!-- 市場開発 (106.7%) -->
+                                <rect x="196" y="65" width="46" height="160" rx="4" fill="#10B981"/>
+                                <text x="219" y="58" text-anchor="middle" font-size="11.5" font-weight="700" fill="#059669">106.7%</text>
+                                <text x="219" y="246" text-anchor="middle" font-size="11" font-weight="700" fill="#1E293B">市場 (80/75)</text>
+                                <!-- 所沢 (83.3%) -->
+                                <rect x="308" y="100" width="46" height="125" rx="4" fill="#818CF8"/>
+                                <text x="331" y="93" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E293B">83.3%</text>
+                                <text x="331" y="246" text-anchor="middle" font-size="11" font-weight="700" fill="#1E293B">所沢 (50/60)</text>
+                                <!-- 川越 (76.7%) -->
+                                <rect x="421" y="110" width="46" height="115" rx="4" fill="#60A5FA"/>
+                                <text x="444" y="103" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E293B">76.7%</text>
+                                <text x="444" y="246" text-anchor="middle" font-size="11" font-weight="700" fill="#1E293B">川越 (46/60)</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5委員会の詳細カード -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 1. 展示場委員会 -->
+                    <div class="bg-gray-50/70 border border-gray-200 rounded-xl p-5 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded">展示場委員会</span>
+                            <span class="text-xs text-gray-500">関課長・鎌田課長</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900">Wインタビュー導入と朝ロープレ習慣化</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            10月は支社計で展示場成約3棟（埼玉西は0棟）。MDXからのオプトイン率は埼玉西58.2%（本部目標50%超・支社目標70%）。<strong>11/16(月)10:00〜「くらしかたインタビュー・スタイルインタビューW勉強会（WEB参加）」</strong>を受講し、長時間面談と歩留まり改善を図る。土日祝9:00〜9:30のトークスクリプト22項目ロープレを全展示場で継続。
+                        </p>
+                    </div>
+
+                    <!-- 2. MRD委員会 -->
+                    <div class="bg-gray-50/70 border border-gray-200 rounded-xl p-5 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded">MRD委員会</span>
+                            <span class="text-xs text-gray-500">岩見部長</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900">情報連絡会13社集客＆ポスターチャレンジ</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            10/26開催「MRD情報連絡会 IN 川越」は<strong>13社17名</strong>が参加し大盛況（次回は12/14(月)セミナー＆忘年会）。新規提携は所沢6社・新座2社・川越1社が前進。11月は訪問ツール第一弾「ベルリードマンション ポスター掲示チャレンジ（大籠HEが先行獲得）」と第二弾「埼玉県内業者リスト（MRD-MSC）」を活用。新規提携・紹介時は上席挨拶同行を徹底。
+                        </p>
+                    </div>
+
+                    <!-- 3. JA委員会 -->
+                    <div class="bg-gray-50/70 border border-gray-200 rounded-xl p-5 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded">JA委員会</span>
+                            <span class="text-xs text-gray-500">神野部長</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900">秋の収穫祭出展と「週1回訪問」の徹底</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            埼玉西エリア（19支店・担当4名）の下期目標は5棟・3.5億円（訪問364件・連れ出し57名）。10月は訪問45件・連れ出し0名と出遅れたが、紹介キャンペーン（スタバカード3,000円分）が窓口で効果を発揮中。<strong>11/7(土)「JAいるま野 秋の収穫祭inかわごえ」・11/14(土)「同inふじみ野」</strong>を起点に、週1回訪問と3者打ち合わせを徹底する。
+                        </p>
+                    </div>
+
+                    <!-- 4. 金融委員会 -->
+                    <div class="bg-gray-50/70 border border-gray-200 rounded-xl p-5 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded">金融委員会</span>
+                            <span class="text-xs text-gray-500">齋藤KD・伊藤MS</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900">面談率40%目標と重点支店への上司同行</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            10月は埼玉西支店で銀行紹介から3棟（1.1億円）の成約を達成。今期2大テーマは「面談率40%向上」と「埼玉西・群馬の紹介数増加」。現状、上司同席訪問（10月実績4回）に個人差が大きいため、各部エチケットリーダーが週次アラートを実施し、<strong>11月中に重点支店への上司挨拶同席を必ず完了</strong>させる。
+                        </p>
+                    </div>
+
+                    <!-- 5. 再受注委員会・イベント動員 -->
+                    <div class="bg-gray-50/70 border border-gray-200 rounded-xl p-5 space-y-2.5 md:col-span-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded">再受注委員会・大型イベント</span>
+                            <span class="text-xs text-gray-500">保田部長・菅野KD</span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900">11/15(日)「住まいとお金の整理セミナー」全HE 2組動員必達</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            11/15(日)13:20〜 TKP大宮ビジネスセンター（共催：武蔵野銀行／定員70名）にて開催される「家族で考える！住まいとお金の整理セミナー」に対し、<strong>営業全員が「各2組（オーナー様1組・MBP1組）」の動員</strong>を必達目標とする。インフレ時代の資産形成や相続・介護に備える内容で説得力が高く、早期の建替・資産活用案件の掘り起こしに直結させる。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション 3: 品質管理・コンプライアンス・業務連絡 -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-gray-50 px-8 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                    <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center text-sm font-bold mr-3 shrink-0">3</span>
+                    品質管理・コンプライアンス・重要業務連絡
+                </h2>
+                <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">報告：田口支店長・保田部長・安全衛生委員会</span>
+            </div>
+
+            <div class="p-8 space-y-8">
+                <!-- グラフ2列配置（静的インラインSVG） -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- グラフ5: お伺い書回収率 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">再受注 お伺い書Ⅰ・Ⅱ 回収率（下期目標：80%必達）</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">埼玉西支店：お伺い書Ⅰ 82.8% ／ お伺い書Ⅱ 72.5%（CSP 185.4P）</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- 外側リング: お伺い書Ⅰ 82.8% (r=84, C=527.79) -->
+                                <circle cx="135" cy="135" r="84" fill="none" stroke="#DBEAFE" stroke-width="20"/>
+                                <circle cx="135" cy="135" r="84" fill="none" stroke="#2563EB" stroke-width="20" stroke-dasharray="437.01 527.79" transform="rotate(-90 135 135)"/>
+                                <!-- 内側リング: お伺い書Ⅱ 72.5% (r=56, C=351.86) -->
+                                <circle cx="135" cy="135" r="56" fill="none" stroke="#D1FAE5" stroke-width="20"/>
+                                <circle cx="135" cy="135" r="56" fill="none" stroke="#10B981" stroke-width="20" stroke-dasharray="255.10 351.86" transform="rotate(-90 135 135)"/>
+                                <!-- 中央テキスト -->
+                                <text x="135" y="131" text-anchor="middle" font-size="12" font-weight="800" fill="#1E293B">目標 80%</text>
+                                <text x="135" y="147" text-anchor="middle" font-size="10" fill="#64748B">発送停止なし</text>
+                                <!-- 右側凡例 -->
+                                <rect x="250" y="75" width="14" height="14" rx="3" fill="#2563EB"/>
+                                <text x="272" y="87" font-size="13" font-weight="700" fill="#1E293B">お伺い書Ⅰ 回収率：82.8%</text>
+                                <text x="272" y="106" font-size="11" fill="#2563EB" font-weight="600">下期目標80%を達成中（未回収 17.2%）</text>
+                                <rect x="250" y="150" width="14" height="14" rx="3" fill="#10B981"/>
+                                <text x="272" y="162" font-size="13" font-weight="700" fill="#1E293B">お伺い書Ⅱ 回収率：72.5%</text>
+                                <text x="272" y="181" font-size="11" fill="#059669" font-weight="600">目標80%まであと7.5%（未回収 27.5%）</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- グラフ6: 標的型攻撃メール訓練結果 -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1 text-center">7月度 標的型攻撃メール訓練 URLクリック率比較</h3>
+                        <p class="text-xs text-gray-500 mb-3 text-center">埼玉西支店は19.4%（6名クリック／1名情報入力）と本部平均(18.4%)を上回る</p>
+                        <div class="w-full h-64">
+                            <svg viewBox="0 0 520 270" class="w-full h-full">
+                                <!-- グリッド (max 30%, 1%=6px) -->
+                                <line x1="50" y1="45" x2="500" y2="45" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="49" text-anchor="end" font-size="11" fill="#64748B">30%</text>
+                                <line x1="50" y1="105" x2="500" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="109" text-anchor="end" font-size="11" fill="#64748B">20%</text>
+                                <line x1="50" y1="165" x2="500" y2="165" stroke="#E2E8F0" stroke-width="1"/>
+                                <text x="42" y="169" text-anchor="end" font-size="11" fill="#64748B">10%</text>
+                                <line x1="50" y1="225" x2="500" y2="225" stroke="#94A3B8" stroke-width="1.5"/>
+                                <text x="42" y="229" text-anchor="end" font-size="11" fill="#64748B">0%</text>
+                                <!-- 埼玉西支店 (19.4%) -->
+                                <rect x="75" y="108.6" width="40" height="116.4" rx="4" fill="#EF4444"/>
+                                <text x="95" y="101" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">19.4%</text>
+                                <text x="95" y="246" text-anchor="middle" font-size="11" font-weight="700" fill="#1E293B">埼玉西支店</text>
+                                <!-- 埼玉支店 (21.7%) -->
+                                <rect x="165" y="94.8" width="40" height="130.2" rx="4" fill="#F59E0B"/>
+                                <text x="185" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#B45309">21.7%</text>
+                                <text x="185" y="246" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">埼玉支店</text>
+                                <!-- 群馬支店 (10.5%) -->
+                                <rect x="255" y="162.0" width="40" height="63.0" rx="4" fill="#10B981"/>
+                                <text x="275" y="155" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">10.5%</text>
+                                <text x="275" y="246" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">群馬支店</text>
+                                <!-- 支社計 (17.9%) -->
+                                <rect x="345" y="117.6" width="40" height="107.4" rx="4" fill="#6366F1"/>
+                                <text x="365" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">17.9%</text>
+                                <text x="365" y="246" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">支社計</text>
+                                <!-- 本部計 (18.4%) -->
+                                <rect x="435" y="114.6" width="40" height="110.4" rx="4" fill="#94A3B8"/>
+                                <text x="455" y="107" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">18.4%</text>
+                                <text x="455" y="246" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">首都圏本部</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 重要業務連絡・厳守事項リスト（4項目） -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 1. お伺い書・契約承認のシステム入力注意 -->
+                    <div class="border-l-4 border-purple-500 bg-purple-50/40 p-5 rounded-r-xl">
+                        <h3 class="text-sm font-bold text-gray-900 mb-2">① お伺い書「連名・二世帯チェック」による2通誤送付の防止</h3>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            契約承認（請報）入力時、単なる親子同居であるにもかかわらず「連名・二世帯住宅」にチェックを入れると、システム上<strong>お伺い書が2通自動発送</strong>され、片方が未回収となって回収率を大きく下げる事例が発生している。完全分離二世帯以外はチェックを入れないこと。なお、11月発送対象分の「延期・停止申請書」期限は<strong>11/13(金)13:00</strong>、原則「発送停止」は行わない。
+                        </p>
+                    </div>
+
+                    <!-- 2. サイバーセキュリティ緊急対策 -->
+                    <div class="border-l-4 border-red-500 bg-red-50/40 p-5 rounded-r-xl">
+                        <h3 class="text-sm font-bold text-gray-900 mb-2">② サイバー攻撃対策・個人情報ローカル保存の即時禁止</h3>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            標的型攻撃メール訓練で複数回クリックしている高リスク者が支店内に存在する。不審メール開封禁止に加え、<strong>お客様の機密情報（運転免許証・源泉徴収票等）をPC・スマホのローカル端末やLINEWORKSトーク上に保存せず、業務利用後ただちに削除</strong>すること。私用端末の業務利用・公共Wi-Fi接続は厳禁。また、退社時のデスク上書類ゼロ（個人情報放置禁止）を今日から徹底する。
+                        </p>
+                    </div>
+
+                    <!-- 3. 安全運転・車両点検ドタキャン厳禁 -->
+                    <div class="border-l-4 border-amber-500 bg-amber-50/40 p-5 rounded-r-xl">
+                        <h3 class="text-sm font-bold text-gray-900 mb-2">③ 安全運転と「車両点検ドタキャン」に対する厳罰措置</h3>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            10月は速度超過0件（急減速1件のみ）と良好。一方、修理工場（高須自動車・ネッツトヨタ）への車検・点検予約の当日・前日キャンセルが多発し、取引停止寸前の事態となっている。<strong>今後ドタキャンが発生した場合は「社有車の個人割り振り解除（共有車化）・乗車禁止」</strong>の措置をとる。アポ重複時は必ず同課メンバーと日程交換するか、事前に上長経由で謝罪・変更連絡を行うこと。
+                        </p>
+                    </div>
+
+                    <!-- 4. 健康経営（Regain Health PJ）・有給休暇取得 -->
+                    <div class="border-l-4 border-emerald-500 bg-emerald-50/40 p-5 rounded-r-xl">
+                        <h3 class="text-sm font-bold text-gray-900 mb-2">④ ウォーキングキャンペーン参加と有給休暇の計画取得</h3>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            11/1(土)〜11/30(日)で「ミサワホーム ウォーキングキャンペーン」が開催中。指定アプリでチーム対抗（MISAWA0010）・グループ対抗（PLT0005）の2つに必ずエントリーすること（2部チームは初日から2万歩超えが5名続出）。また、年5日の有給取得義務（履行期間2026/10/1〜2027/9/30）に対し未申請者が多いため、早期に取得予定日を申請すること。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 補足事項バー -->
+                <div class="bg-gray-100 rounded-xl p-4 text-xs text-gray-700 flex flex-col md:flex-row justify-between gap-4">
+                    <div>
+                        <strong>【利益率管理の注意】</strong> SS（標準利益率26%）で契約後にRoomie（同24%）へ商品変更すると、変更契約時に利益率が急落するケースがあるため事前説明と仕様確定を徹底すること。
+                    </div>
+                    <div class="shrink-0">
+                        <strong>【内製化感謝】</strong> 事務所設備修繕（見積9.9万円→約2万円へ削減）を竹本HE・CSにて内製化対応完了。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 決定事項・ネクストアクションリスト -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="bg-gray-800 px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h2 class="text-xl font-bold text-white flex items-center">
+                    決定事項 ＆ ネクストアクション一覧
+                </h2>
+                <span class="text-xs text-gray-300">全メンバー確認・実行必須タスク</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200 text-gray-600 text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 font-bold">カテゴリ</th>
+                            <th class="px-6 py-4 font-bold">決定事項・具体的アクション</th>
+                            <th class="px-6 py-4 font-bold">担当</th>
+                            <th class="px-6 py-4 font-bold">期限・日程</th>
+                            <th class="px-6 py-4 font-bold text-center">重要度</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-blue-600 whitespace-nowrap">営業活動</td>
+                            <td class="px-6 py-4 text-gray-800">11/7(土)までに各自「2件」の商談客創出・管理客フォロー（10日締め・15日締めで進捗チェック）</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">全営業メンバー</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月7日(土)／15日(日)</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 whitespace-nowrap">最優先</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-indigo-600 whitespace-nowrap">JAイベント</td>
+                            <td class="px-6 py-4 text-gray-800">「JAいるま野 秋の収穫祭」への参加・顧客誘致（11/7川越本店、11/14ふじみ野）</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">JA担当・川越・新座</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月7日(土)・14日(土)</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-orange-100 text-orange-700 whitespace-nowrap">重要</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-purple-600 whitespace-nowrap">事務・品質</td>
+                            <td class="px-6 py-4 text-gray-800">11月度お伺い書「延期・停止申請書」の確認・提出（原則発送停止なし・二世帯誤チェック確認）</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">営業・建設・CS担当</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月13日(金) 13:00</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 whitespace-nowrap">期限厳守</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-emerald-600 whitespace-nowrap">セミナー集客</td>
+                            <td class="px-6 py-4 text-gray-800">「家族で考える！住まいとお金の整理セミナー（TKP大宮）」へ各HE 2組（オーナー1・MBP1）動員</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">全営業メンバー</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月15日(日) 13:20</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 whitespace-nowrap">必達目標</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-blue-600 whitespace-nowrap">研修・勉強会</td>
+                            <td class="px-6 py-4 text-gray-800">「くらしかた・スタイルインタビュー W勉強会」へWEB参加（※当日支店朝礼はなし）</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">個販営業部門全員</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月16日(月) 10:00</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-blue-100 text-blue-700 whitespace-nowrap">参加必須</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-indigo-600 whitespace-nowrap">法人・金融</td>
+                            <td class="px-6 py-4 text-gray-800">重点金融機関への上司同行挨拶の実施、およびMRD業者へのポスター掲示・リスト訪問展開</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">各課HE・管理職</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">11月末日まで</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-orange-100 text-orange-700 whitespace-nowrap">重要</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-rose-600 whitespace-nowrap">コンプラ・安全</td>
+                            <td class="px-6 py-4 text-gray-800">個人情報ローカル保存・退社時机上放置の禁止、および車両点検予約のドタキャン厳禁徹底</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">全社員</td>
+                            <td class="px-6 py-4 text-gray-600 whitespace-nowrap">即日・常時徹底</td>
+                            <td class="px-6 py-4 text-center"><span class="inline-flex px-2.5 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700 whitespace-nowrap">厳守事項</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
