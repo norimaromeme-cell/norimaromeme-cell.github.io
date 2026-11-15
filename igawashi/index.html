@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>住宅業務におけるAI・DX活用推進とセキュリティ要件すり合わせ会議 統合分析レポート</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .card-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. ヒーローヘッダー -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white pt-12 pb-24 px-6 shadow-lg">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full tracking-wide">
+                    MEETING ANALYTICS REPORT
+                </span>
+                <span class="bg-indigo-900/40 text-blue-100 text-xs font-medium px-3 py-1 rounded-full">
+                    開催日：2026年11月15日
+                </span>
+                <span class="bg-indigo-900/40 text-blue-100 text-xs font-medium px-3 py-1 rounded-full">
+                    ミサワホーム 埼玉・群馬支社 × AIFIT株式会社
+                </span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 tracking-tight leading-tight">
+                住宅業務におけるAI・DX活用推進と<br class="hidden md:inline">セキュリティ要件すり合わせ会議 統合分析レポート
+            </h1>
+            <p class="text-blue-100 text-base md:text-lg leading-relaxed max-w-4xl">
+                グループ内サイバー攻撃事案に伴う緊急セキュリティ通達（Google環境限定・個人情報投入厳禁）を前提としつつ、AIFIT社提案の「住宅業務AI活用事例集（全6領域・33業務）」と営業・設計・営業業務課の現場課題を突合。単なる「AI導入」にとどまらない現実的な推進戦略（DX化との使い分け・スモールスタート）を導き出した協議の全体像を可視化します。
+            </p>
+
+            <!-- 出席者・役割バー -->
+            <div class="mt-8 pt-6 border-t border-white/20 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-white/10 rounded-lg p-3.5">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-200 block mb-1.5">現地出席メンバー（会議室集音）</span>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-white/20 px-2.5 py-0.5 rounded text-xs font-medium">田中 紀彦（営業業務課）</span>
+                        <span class="bg-white/20 px-2.5 py-0.5 rounded text-xs font-medium">谷本 亘（設計）</span>
+                        <span class="bg-white/20 px-2.5 py-0.5 rounded text-xs font-medium">松本 悠（営業）</span>
+                        <span class="bg-white/20 px-2.5 py-0.5 rounded text-xs font-medium">高木 香代子（営業業務課）</span>
+                        <span class="bg-amber-400/25 border border-amber-300/40 px-2.5 py-0.5 rounded text-xs font-medium">居川 野々香（AIFIT AI活用推進部）</span>
+                    </div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3.5">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-200 block mb-1.5">Web参加メンバー（Zoomリモート）</span>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-white/20 px-2.5 py-0.5 rounded text-xs font-medium">笹治 拳（営業業務課）</span>
+                        <span class="bg-amber-400/25 border border-amber-300/40 px-2.5 py-0.5 rounded text-xs font-medium">久保 康大（AIFIT 代表取締役）</span>
+                        <span class="bg-slate-900/30 text-blue-200 px-2.5 py-0.5 rounded text-xs">※後日報告先：篠原氏（支社長）</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-16">
+
+        <!-- 2. 重要指標・ハイライトカード（3カラム横並び） -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 -mt-14">
+            <div class="bg-white rounded-xl shadow-md p-6 border border-slate-100 card-hover">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded">技術・ガバナンス制約</span>
+                    <span class="text-xs text-slate-400">2026/11/13 通達基準</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 my-2">Google環境内限定</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    ChatGPT等の外部AIは原則禁止。Microsoft 365未導入（Office 2021買い切り環境）のため、Google Workspace（Gemini / NotebookLM）内で完結する構成が必須条件。
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border border-slate-100 card-hover">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded">提案33業務の実行性</span>
+                    <span class="text-xs text-slate-400">AIFIT事例集分析</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-blue-600 my-2">即時試行 54.5% <span class="text-base font-semibold text-slate-500">(18/33業務)</span></h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    手元資料で「1回試す」段階では過半数が★1（すぐできる）に該当。一方、定常的な「仕組み化」には45.5%で開発（★3）と本社ITソリューション部の承認が必要。
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border border-slate-100 card-hover">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded">最優先の現場インパクト</span>
+                    <span class="text-xs text-slate-400">営業 × 設計 連携</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-teal-600 my-2">手戻り・遠慮の解消</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    単なる作業時間短縮だけでなく、営業が初期プラン作成時に設計へ質問する「心理的ハードル」をAI一次チェックで緩和し、商談スピードと提案精度を高める方針で一致。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 詳細分析セクション -->
+        <div class="space-y-12">
+
+            <!-- セクション1 -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">1. セキュリティガバナンスの厳格化と社内IT環境の制約</h3>
+                    <span class="text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-3 py-1 rounded-full">前提条件・最優先確認事項</span>
+                </div>
+
+                <p class="text-slate-700 leading-relaxed mb-6">
+                    2026年11月13日付で管理本部ITソリューション部（岡村好晃部長）より発出された「【緊急】サイバー攻撃に関する対策徹底のお願い」を受け、ミサワホームグループ全体で情報管理ルールが大幅に厳格化されました。会議前半では、共有された社内通達と実際のPC・ネットワーク環境を照らし合わせ、AI活用における明確な境界線を確認しました。
+                </p>
+
+                <!-- 議論の核心（話者別の見解カード） -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/70">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                            <h4 class="font-bold text-slate-900 text-sm">笹治 拳 氏（Web / 営業業務課）</h4>
+                        </div>
+                        <p class="text-xs font-semibold text-indigo-700 mb-2">「Google管轄外は原則すべて禁止」</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            本社ITソリューション部の審査に合格したソフトのみ利用可能。現在ChatGPTやClaude等の外部AIサービスは原則禁止されており、Google Workspace（Gemini等）内に収める必要がある。また社外ドメインとのドライブ・Chat共有も遮断されている。
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/70">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                            <h4 class="font-bold text-slate-900 text-sm">久保 康大 氏（Web / AIFIT社長）</h4>
+                        </div>
+                        <p class="text-xs font-semibold text-blue-700 mb-2">「本質はAIではなく保存場所の統制」</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            セキュリティ上のリスクはGoogleドライブへのアップロードと同等であり、利用サービスが分散すると統制不能になるため「Geminiのみに限定する」のは極めて現実的。個人情報を投入しない設計と、ローカル処理の組み合わせが有効。
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/70">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                            <h4 class="font-bold text-slate-900 text-sm">田中 紀彦 氏・高木 香代子 氏（営業業務課）</h4>
+                        </div>
+                        <p class="text-xs font-semibold text-teal-700 mb-2">「Officeは買い切り版・MS365は未導入」</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            社内PCのOfficeは「LTSC Standard 2021（買い切り版）」であり、Power Automate等のMicrosoft系クラウド自動化ツールは使用不可。以前よりも社のルール化が厳しくなっており、新規ツール導入時はITソリューション部への事前確認が不可欠。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- グラフ2列 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">会議における議論の関心比重（時間・発言量分析）</h4>
+                        <p class="text-xs text-slate-500 mb-4">セキュリティ要件の擦り合わせと現場課題の特定が全体の65%を占有</p>
+                        <div class="relative h-64 w-full">
+                            <canvas id="topicChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">社内ツール環境とAI活用における利用可否ステータス</h4>
+                        <p class="text-xs text-slate-500 mb-4">通達およびITソリューション部規定に基づく利用可能度評価（100点満点換算）</p>
+                        <div class="relative h-64 w-full">
+                            <canvas id="envChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- セクション2 -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">2. AIFIT提案「住宅業務AI活用事例集（全33業務）」の難易度構造分析</h3>
+                    <span class="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">提案資料 × 現場評価</span>
+                </div>
+
+                <p class="text-slate-700 leading-relaxed mb-6">
+                    AIFIT社より提示された全6カテゴリ・33業務の事例集は、手元の資料で単発実行する<strong>「1回試す」</strong>と、誰でも毎月・毎件同じ品質で回せる<strong>「仕組み化」</strong>の2軸で難易度が定義されています。資料データを定量分析すると、「1回試す」段階では54.5%（18業務）が★1（すぐできる）である一方、「仕組み化」へ移行する際には★3（本格開発が必要）が2件から15件へと7.5倍に急増する構造が明らかになりました。
+                </p>
+
+                <!-- グラフ2列 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">「1回試す」vs「仕組み化」難易度別業務数（全33業務）</h4>
+                        <p class="text-xs text-slate-500 mb-4">単発利用は容易だが、定常運用（自動化）には開発・IT承認の壁が存在</p>
+                        <div class="relative h-72 w-full">
+                            <canvas id="difficultyChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">業務カテゴリ別の提案数と「即時試行可能（★1）」の内訳</h4>
+                        <p class="text-xs text-slate-500 mb-4">「入力・集計」「資料づくり」「図面・申請の確認」が提案の約73%を構成</p>
+                        <div class="relative h-72 w-full">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6カテゴリの現場評価サマリーテーブル -->
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700 text-xs uppercase">
+                                <th class="py-3 px-4 font-bold">業務カテゴリ (件数)</th>
+                                <th class="py-3 px-4 font-bold">代表的な業務例</th>
+                                <th class="py-3 px-4 font-bold">難易度 (試行→仕組み)</th>
+                                <th class="py-3 px-4 font-bold">会議内での現場フィードバック・評価</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-xs md:text-sm text-slate-600">
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">1. 入力・集計 (9件)</td>
+                                <td class="py-3 px-4">PDF/画像→Excel転記、複数書類統合、発注変更記録</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1〜2</span> → <span class="text-indigo-700 font-semibold">★1〜3</span></td>
+                                <td class="py-3 px-4">事務・営業業務課で集計作業の負荷が高く、ローカル自動化やGemini活用の余地大。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">2. 資料づくり (8件)</td>
+                                <td class="py-3 px-4">PDF→PowerPoint変換、白黒CG→カラーパース、提案書手直し</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1〜2</span> → <span class="text-indigo-700 font-semibold">★1〜3</span></td>
+                                <td class="py-3 px-4">谷本氏（設計）はカラーパース等を既に活用中。田中氏はPDF→PPT変換に強い関心。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">3. 資料・メール検索 (2件)</td>
+                                <td class="py-3 px-4">社内マニュアル検索（ページ番号付き回答）、過去問合せ検索</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1</span> → <span class="text-rose-600 font-semibold">★3</span></td>
+                                <td class="py-3 px-4">NotebookLMやGeminiにマニュアルを読み込ませることで、個人情報なしで即実践可能。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">4. 商談の準備 (4件)</td>
+                                <td class="py-3 px-4">商談記録→次回提案方針案、工事費・積算概算、収支一覧</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1〜2</span> → <span class="text-indigo-700 font-semibold">★2〜3</span></td>
+                                <td class="py-3 px-4">前回議論の「積算」は部分最適感が強く見送り。商談録音の要約・次提案化は現場関心高。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">5. 人員・工期管理 (3件)</td>
+                                <td class="py-3 px-4">複数物件の進捗管理、案件割り振り、職人配置・工期調整</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1〜2</span> → <span class="text-rose-600 font-semibold">★3</span></td>
+                                <td class="py-3 px-4">建設部門特有の課題が多いため、次回以降に建設担当者を集めた個別ヒアリングを検討。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-bold text-slate-800">6. 図面・申請確認 (7件)</td>
+                                <td class="py-3 px-4">図面と仕様書の照合、役所調査記録、法令調査、天空率計算</td>
+                                <td class="py-3 px-4"><span class="text-blue-600 font-semibold">★1〜3</span> → <span class="text-indigo-700 font-semibold">★2〜3</span></td>
+                                <td class="py-3 px-4"><span class="font-semibold text-teal-700">最注目領域。</span>役所調査の効率化と、営業プランの初期構造チェックにニーズ集中。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- セクション3 -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">3. 現場ボトルネックの深掘り：営業×設計の連携課題と「心理的ストレス」の解消</h3>
+                    <span class="text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-200 px-3 py-1 rounded-full">現場課題の核心</span>
+                </div>
+
+                <p class="text-slate-700 leading-relaxed mb-6">
+                    議論が深まる中で浮き彫りになったのは、単なる「作業時間の短縮（例：30分の時短）」以上に、<strong>「営業担当者が初期プラン作成時に設計担当者へ構造や法規の可否を確認する際の心理的ハードル・遠慮」</strong>が現場の大きなストレスになっている点です。設計側（谷本氏ら）は忙しくても数分で回答してくれるものの、営業側（松本氏ら）は「業務を止めてしまう申し訳なさ」から確認を躊躇し、結果として商談後の手戻りリスクを抱えていました。
+                </p>
+
+                <!-- 3つの重点テーマ比較カード -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                    <div class="bg-gradient-to-b from-blue-50/70 to-white rounded-xl p-5 border border-blue-200">
+                        <div class="text-xs font-bold text-blue-700 mb-1">重点テーマ A（営業 × 設計）</div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">初期プランの構造成立性一次チェック</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            設計マニュアルや過去の修正指示（赤入れ）データを学習・参照させ、営業が描いた間取りプランに対して「壁が不足しそうな箇所・屋根の注意点」をリスト出力。
+                        </p>
+                        <div class="text-xs bg-white p-2.5 rounded border border-blue-100 text-slate-700">
+                            <span class="font-bold text-blue-700">期待効果：</span> 営業の心理的ストレス軽減と、設計担当者の割り込み業務の削減を同時に達成。
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-teal-50/70 to-white rounded-xl p-5 border border-teal-200">
+                        <div class="text-xs font-bold text-teal-700 mb-1">重点テーマ B（営業 × 営業業務課）</div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">役所調査（役調）の網羅性と入力効率化</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            顧客の個人情報を一切含まないため、セキュリティ規定を最もクリアしやすい領域。自治体ごとの確認項目（ハザードマップ・学校区・窓口案内・聞き忘れ防止リスト）をAIで自動生成。
+                        </p>
+                        <div class="text-xs bg-white p-2.5 rounded border border-teal-100 text-slate-700">
+                            <span class="font-bold text-teal-700">期待効果：</span> 調査の事前準備（1〜4工程）を大幅に短縮し、聞き漏れによる再訪リスクを防止。
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-indigo-50/70 to-white rounded-xl p-5 border border-indigo-200">
+                        <div class="text-xs font-bold text-indigo-700 mb-1">重点テーマ C（設計業務の切り分け）</div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">天空率計算の条件判定と本計算の分離</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            厳密な天空率計算は立体処理や敷地境界の正確なトレースが必要であり、Gemini単体では精度・技術的ハードルが高いことが判明。
+                        </p>
+                        <div class="text-xs bg-white p-2.5 rounded border border-indigo-100 text-slate-700">
+                            <span class="font-bold text-indigo-700">現実的アプローチ：</span> 「斜線緩和や適用除外で天空率計算が不要か」の一次判定のみAIで行い、本計算は専用ツール/設計が担う。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- グラフ2列 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">重点3テーマの4軸実現性・効果比較（5段階評価）</h4>
+                        <p class="text-xs text-slate-500 mb-4">「役所調査の効率化」と「初期プランチェック」がセキュリティ適合・効果ともに高評価</p>
+                        <div class="relative h-72 w-full">
+                            <canvas id="impactChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/60">
+                        <h4 class="text-sm font-bold text-slate-800 mb-1">業務プロセス（全10工程）における最適な役割分担モデル</h4>
+                        <p class="text-xs text-slate-500 mb-4">笹治氏提案：全工程をAI化せず、前半の定型DXと中盤のAI補助で人間の最終確認を支える</p>
+                        <div class="relative h-72 w-full">
+                            <canvas id="processChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- セクション4 -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">4. 推進戦略の合意：「AI化」から「DX化（業務効率化）」への視点転換</h3>
+                    <span class="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">今後の推進ロードマップ</span>
+                </div>
+
+                <p class="text-slate-700 leading-relaxed mb-6">
+                    会議終盤では、笹治氏（営業業務課）からの「目指すべきは『AIを使うこと自体（AI化）』か、それとも『業務効率化（DX化）』か？」という問題提起を契機に、今後の推進戦略が明確化されました。「AI化」に固執するとGoogle環境内の制約に縛られますが、「DX化（生産性向上）」を主目的に据えることで、ローカル環境のツール構築とGemini活用を柔軟に組み合わせた<strong>スモールスタート</strong>が可能になります。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border border-slate-200 rounded-xl p-6 bg-slate-50/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded">推進軸 1</span>
+                            <h4 class="font-bold text-slate-900 text-base">全社リテラシーの底上げ（普及・教育）</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                            現在、支社内でAIを実務活用しているのは松本氏・谷本氏など一部に留まり、大多数は「自分の業務には関係ない」と感じている層です。本社開催のWeb勉強会（約1,000名規模）の活用に加え、支社内でも「PDF→PowerPoint変換」や「議事録要約」といった<strong>小さな成功体験</strong>を共有し、AI活用の心理的障壁を下げます。
+                        </p>
+                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li>「個人情報を入れずに安全に使う境界線」の分かりやすいガイド共有</li>
+                            <li>他部署での成功事例の横展開による「自分ごと化」の促進</li>
+                        </ul>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-xl p-6 bg-slate-50/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded">推進軸 2</span>
+                            <h4 class="font-bold text-slate-900 text-base">職種別ヒアリングと伴走型コンサルティング</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                            営業・設計・建設・事務では業務フローや痛点が全く異なるため、今後は部門単位（例：建設部門のみ）で集中的にヒアリングを行う方針を確認。AIFIT社に対しては、単発のシステム受託開発だけでなく、定期訪問による<strong>伴走型の相談窓口（コンサルティング契約）</strong>としての支援形態も視野に、篠原支社長と投資判断を協議します。
+                        </p>
+                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li>Google環境内で完結する具体例（3〜5選）のプロトタイプ検証</li>
+                            <li>篠原支社長への報告・方針確認および本社ITソリューション部との連携</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- 4. ネクストアクション・決定事項リスト（最下部） -->
+        <section class="mt-12">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                <h3 class="text-2xl font-bold text-slate-900">ネクストアクション・決定事項一覧</h3>
+                <span class="text-xs text-slate-500">会議での合意事項および次期ステップ</span>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                            <th class="py-4 px-6 font-semibold w-12">No.</th>
+                            <th class="py-4 px-6 font-semibold">アクション・決定タスク内容</th>
+                            <th class="py-4 px-6 font-semibold w-48">担当者（役割）</th>
+                            <th class="py-4 px-6 font-semibold w-40">目標時期・フェーズ</th>
+                            <th class="py-4 px-6 font-semibold w-36">ステータス</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700 text-sm divide-y divide-slate-200">
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="py-4 px-6 font-bold text-slate-400">01</td>
+                            <td class="py-4 px-6">
+                                <p class="font-bold text-slate-900 mb-0.5">篠原支社長への会議報告と推進方針・契約形態の協議</p>
+                                <p class="text-xs text-slate-500">セキュリティ制約（Google環境限定）と現場ニーズを報告し、伴走型コンサル契約や投資優先度を相談。</p>
+                            </td>
+                            <td class="py-4 px-6 font-medium text-slate-800">田中 紀彦 氏<br><span class="text-xs text-slate-500">（営業業務課）</span></td>
+                            <td class="py-4 px-6 text-xs font-semibold text-slate-700">会議後 速やかに</td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-xs font-bold">最優先・着手中</span></td>
+                        </tr>
+
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="py-4 px-6 font-bold text-slate-400">02</td>
+                            <td class="py-4 px-6">
+                                <p class="font-bold text-slate-900 mb-0.5">Google環境内で完結する具体事例（3〜5選）と成果イメージの提示</p>
+                                <p class="text-xs text-slate-500">Gemini / NotebookLMのみで動作し、個人情報を扱わない業務（PDF→PPT変換、役所調査リスト化等）の具体例を作成。</p>
+                            </td>
+                            <td class="py-4 px-6 font-medium text-slate-800">久保 康大 氏<br>居川 野々香 氏<br><span class="text-xs text-slate-500">（AIFIT株式会社）</span></td>
+                            <td class="py-4 px-6 text-xs font-semibold text-slate-700">次回打ち合わせまで</td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold">進行中</span></td>
+                        </tr>
+
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="py-4 px-6 font-bold text-slate-400">03</td>
+                            <td class="py-4 px-6">
+                                <p class="font-bold text-slate-900 mb-0.5">本社ITソリューション部への確認・申請ラインの整理</p>
+                                <p class="text-xs text-slate-500">Google環境外へ出る処理や新規ツール導入時のセキュリティ審査基準・承認フローを本社のIT担当へ確認。</p>
+                            </td>
+                            <td class="py-4 px-6 font-medium text-slate-800">笹治 拳 氏<br>田中 紀彦 氏<br><span class="text-xs text-slate-500">（営業業務課）</span></td>
+                            <td class="py-4 px-6 text-xs font-semibold text-slate-700">要件具体化時</td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">調整中</span></td>
+                        </tr>
+
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="py-4 px-6 font-bold text-slate-400">04</td>
+                            <td class="py-4 px-6">
+                                <p class="font-bold text-slate-900 mb-0.5">他部署・他職種（建設部門など）への横展開と個別ヒアリング開催</p>
+                                <p class="text-xs text-slate-500">提案事例集を他社員へ共有し、建設・施工管理など職種別の課題抽出ミーティングを企画。</p>
+                            </td>
+                            <td class="py-4 px-6 font-medium text-slate-800">田中 紀彦 氏<br>高木 香代子 氏<br><span class="text-xs text-slate-500">（営業業務課）</span></td>
+                            <td class="py-4 px-6 text-xs font-semibold text-slate-700">次フェーズ</td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold">計画中</span></td>
+                        </tr>
+
+                        <tr class="hover:bg-blue-50/50 transition-colors">
+                            <td class="py-4 px-6 font-bold text-slate-400">05</td>
+                            <td class="py-4 px-6">
+                                <p class="font-bold text-slate-900 mb-0.5">「初期プラン構造チェック」「役所調査効率化」のPoC（試行）検討</p>
+                                <p class="text-xs text-slate-500">営業のプラン作成時チェックリスト生成や、役所調査の事前確認自動化について現場ベースでテスト実施。</p>
+                            </td>
+                            <td class="py-4 px-6 font-medium text-slate-800">松本 悠 氏（営業）<br>谷本 亘 氏（設計）<br>AIFIT株式会社</td>
+                            <td class="py-4 px-6 text-xs font-semibold text-slate-700">方針合意後</td>
+                            <td class="py-4 px-6"><span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold">待機（承認後）</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 px-6 text-center text-xs">
+        <p>Generated from Meeting Recording & Shared Documents (2026.11.15) — Misawa Home Saitama-Gunma Branch × AIFIT Inc.</p>
+    </footer>
+
+    <!-- Chart.js 描画スクリプト -->
+    <script>
+        Chart.defaults.font.family = "'Noto Sans JP', sans-serif";
+        Chart.defaults.color = '#475569';
+
+        // 1. 議論の関心比重ドーナツグラフ
+        new Chart(document.getElementById('topicChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'セキュリティ制約・ITガバナンス',
+                    '現場課題（営業×設計連携・役調）',
+                    '推進方針・契約形態（DX vs AI）',
+                    '社内リテラシー教育・勉強会'
+                ],
+                datasets: [{
+                    data: [35, 30, 20, 15],
+                    backgroundColor: ['#4f46e5', '#0d9488', '#2563eb', '#f59e0b'],
+                    borderWidth: 2,
+                    borderColor: '#f8fafc'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '62%',
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { boxWidth: 12, padding: 12, font: { size: 11 } }
+                    }
+                }
+            }
+        });
+
+        // 2. 社内ツール利用可否横棒グラフ
+        new Chart(document.getElementById('envChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Google Gemini / NotebookLM (社内環境)',
+                    'ローカルPCマクロ・Python等の単独処理',
+                    'Office 2021 (買い切り版・連携なし)',
+                    'Googleドライブ等の社外ドメイン共有',
+                    'ChatGPT / Claude / 外部クラウドAI'
+                ],
+                datasets: [{
+                    label: '利用可能・推奨度スコア',
+                    data: [95, 80, 60, 10, 0],
+                    backgroundColor: ['#2563eb', '#0d9488', '#64748b', '#f59e0b', '#e11d48'],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const notes = [
+                                    '推奨（個人情報除外が前提）',
+                                    '有効（セキュリティ審査不要範囲）',
+                                    '実務利用可（Power Automate不可）',
+                                    '原則遮断（例外アカウント除く）',
+                                    '通達により全面禁止'
+                                ];
+                                return `${ctx.raw}点：${notes[ctx.dataIndex]}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { max: 100, grid: { color: '#e2e8f0' } },
+                    y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+                }
+            }
+        });
+
+        // 3. 「1回試す」vs「仕組み化」難易度比較棒グラフ
+        new Chart(document.getElementById('difficultyChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['★1（すぐできる）', '★2（設定が必要）', '★3（本格開発が必要）'],
+                datasets: [
+                    {
+                        label: '1回試す（単発実行）',
+                        data: [18, 13, 2],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 6
+                    },
+                    {
+                        label: '仕組み化（定常運用・自動化）',
+                        data: [3, 15, 15],
+                        backgroundColor: '#4338ca',
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top', labels: { font: { size: 12 } } }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 20,
+                        title: { display: true, text: '該当業務数（件）', font: { size: 11 } },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // 4. カテゴリ別提案数と即時試行可能内訳
+        new Chart(document.getElementById('categoryChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    '入力・集計 (9件)',
+                    '資料づくり (8件)',
+                    '図面・申請の確認 (7件)',
+                    '商談の準備 (4件)',
+                    '人員・工期の管理 (3件)',
+                    '資料・メールを探す (2件)'
+                ],
+                datasets: [
+                    {
+                        label: '即時試行可能（1回試す ★1）',
+                        data: [6, 5, 2, 2, 1, 2],
+                        backgroundColor: '#14b8a6',
+                        borderRadius: 4
+                    },
+                    {
+                        label: '設定・開発が必要（★2〜3）',
+                        data: [3, 3, 5, 2, 2, 0],
+                        backgroundColor: '#cbd5e1',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top', labels: { font: { size: 11 } } }
+                },
+                scales: {
+                    x: { stacked: true, max: 10, grid: { color: '#e2e8f0' } },
+                    y: { stacked: true, grid: { display: false }, ticks: { font: { size: 11 } } }
+                }
+            }
+        });
+
+        // 5. 重点3テーマの4軸レーダーチャート
+        new Chart(document.getElementById('impactChart').getContext('2d'), {
+            type: 'radar',
+            data: {
+                labels: ['セキュリティ適合性', '即時実現性（Google内）', '現場ストレス軽減度', '直接的な時短効果'],
+                datasets: [
+                    {
+                        label: 'A. 初期プラン構造チェック',
+                        data: [4, 4, 5, 4],
+                        backgroundColor: 'rgba(37, 99, 235, 0.18)',
+                        borderColor: '#2563eb',
+                        pointBackgroundColor: '#2563eb'
+                    },
+                    {
+                        label: 'B. 役所調査（役調）効率化',
+                        data: [5, 5, 4, 4],
+                        backgroundColor: 'rgba(13, 148, 136, 0.18)',
+                        borderColor: '#0d9488',
+                        pointBackgroundColor: '#0d9488'
+                    },
+                    {
+                        label: 'C. 天空率計算（本計算）',
+                        data: [3, 2, 4, 5],
+                        backgroundColor: 'rgba(99, 102, 241, 0.15)',
+                        borderColor: '#6366f1',
+                        pointBackgroundColor: '#6366f1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 5,
+                        ticks: { stepSize: 1, display: false },
+                        pointLabels: { font: { size: 11, weight: 'bold' } }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                }
+            }
+        });
+
+        // 6. 業務プロセスにおける役割分担積み上げ横棒グラフ
+        new Chart(document.getElementById('processChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['理想的なAI/DX分業モデル'],
+                datasets: [
+                    {
+                        label: '1〜4工程：定型DX化（ローカル自動化・リスト抽出）',
+                        data: [40],
+                        backgroundColor: '#2563eb',
+                        borderRadius: { topLeft: 8, bottomLeft: 8 }
+                    },
+                    {
+                        label: '5〜7工程：AI補助（Geminiによる一次判定・要約）',
+                        data: [30],
+                        backgroundColor: '#14b8a6'
+                    },
+                    {
+                        label: '8〜10工程：人間による最終確認・顧客提案',
+                        data: [30],
+                        backgroundColor: '#475569',
+                        borderRadius: { topRight: 8, bottomRight: 8 }
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, padding: 14, font: { size: 11 } } },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.dataset.label}（全体の${ctx.raw}%）`
+                        }
+                    }
+                },
+                scales: {
+                    x: { stacked: true, max: 100, ticks: { callback: (v) => v + '%' }, grid: { color: '#e2e8f0' } },
+                    y: { stacked: true, display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
