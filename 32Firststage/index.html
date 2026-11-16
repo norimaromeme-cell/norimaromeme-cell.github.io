@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>所沢北吹奏楽団 第32回定期演奏会 第1部プログラム＆ガイド</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- 1. ヒーローヘッダー -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs sm:text-sm font-medium mb-4">
+        <span>🎺 所沢北吹奏楽団 団員展開用インフォグラフィック</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black tracking-tight leading-tight mb-4">
+        第32回定期演奏会 第1部セットリスト＆プログラムガイド
+      </h1>
+      <p class="text-blue-100 text-sm sm:text-base max-w-3xl leading-relaxed">
+        2027年5月9日（日）開催の第32回定期演奏会に向け、第1部（クラシック・オリジナルステージ）の曲目・デモ演奏・譜面PDFを公開します。12月6日のウインターコンサート終了直後からスムーズに練習へ移行できるよう、各曲の構成意図・聴きどころ・音源リンクを一望できるレポートにまとめました。
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 pb-16 space-y-12">
+
+    <!-- 2. 重要指標・ハイライトカード（3カラム横並び） -->
+    <section aria-label="開催概要・重要ハイライト">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- カード1 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">
+              開催日時・会場
+            </span>
+            <div class="mt-4 text-2xl sm:text-3xl font-black text-slate-900">
+              2027.5.9 <span class="text-lg font-bold text-slate-600">(日)</span>
+            </div>
+            <p class="text-sm font-bold text-indigo-600 mt-1">13:30 開演</p>
+          </div>
+          <p class="mt-4 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600">
+            会場：<strong class="text-slate-800">所沢市民文化センターミューズ アークホール</strong>
+          </p>
+        </div>
+
+        <!-- カード2 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">
+              第1部 ボリューム構成
+            </span>
+            <div class="mt-4 text-2xl sm:text-3xl font-black text-slate-900">
+              全5曲 <span class="text-lg font-bold text-slate-600">/ 約39分47秒</span>
+            </div>
+            <p class="text-sm font-bold text-indigo-600 mt-1">※予備曲差し替え時は 約37分09秒</p>
+          </div>
+          <p class="mt-4 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600">
+            第2部ポップスステージ（テーマ：<strong class="text-slate-800">「ミュージカル」</strong>）へ繋ぐ王道プログラム
+          </p>
+        </div>
+
+        <!-- カード3 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">
+              定演練習スタート
+            </span>
+            <div class="mt-4 text-2xl sm:text-3xl font-black text-slate-900">
+              12月第2週〜
+            </div>
+            <p class="text-sm font-bold text-emerald-600 mt-1">12/6(日) ウインターコンサート翌週</p>
+          </div>
+          <p class="mt-4 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600">
+            音源・譜面PDFを先行公開。早期の譜読み・イメージ共有で仕上がり向上を目指します
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 詳細分析セクション -->
+
+    <!-- セクション1：セットリスト＆音源・譜面ハブ -->
+    <section class="space-y-6">
+      <div class="border-l-4 border-blue-600 pl-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+          1. 第1部セットリスト・各曲解説＆資料リンク
+        </h2>
+        <p class="mt-1 text-sm sm:text-base text-slate-600 leading-relaxed">
+          今回の第1部は<strong>「吹奏楽の王道と色彩感・物語性」</strong>をテーマに、華やかなオープニングから神秘と狂乱の踊り、歌心あふれる旋律、そして舞台芸術の色彩豊かな組曲へと展開します。各カードのボタンからデモ演奏と譜面PDFへ直接アクセスできます。
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- 1曲目 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-5 sm:p-6">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-sm">1</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">序盤：幕開けのファンファーレ</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">演奏時間 5:30</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+                プロローグ・ワン <span class="text-sm font-medium text-slate-500">／ 田村 修平</span>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                タイトル通り「物語の始まり」にふさわしい、輝かしいファンファーレと疾走感あふれる爽やかな序曲。金管の華やかな響きと木管の軽やかなパッセージが心地よく絡み合い、ステージと客席の空気を一気に温めます。
+              </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+              <a href="https://drive.google.com/file/d/1oIdpMtgB3eTrwLHlw4mBoDGUIHT2d2WT/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold transition-colors shadow-xs">
+                <span>▶ デモ演奏を聴く</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/184e5KTwn-mTPXHeWP-r-PYOc422g-DUF?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold transition-colors">
+                <span>📄 譜面PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2曲目 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-5 sm:p-6">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-sm">2</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-blue-50 text-blue-700">序盤：静と動の圧倒的熱気</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">演奏時間 7:37</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+                呪文と踊り <span class="text-sm font-medium text-slate-500">／ ジョン・バーンズ・チャンス</span>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                前半の「呪文」では木管楽器や打楽器によるミステリアスで緊張感のある響きが漂い、後半の「踊り」では変拍子のリズムに乗って打楽器群が炸裂し、圧倒的なエネルギーで駆け抜けます。静と動の対比が鮮烈な不朽の名作です。
+              </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+              <a href="https://drive.google.com/file/d/1P0oSXcYAjlJoR0Pao9Vgea1BaQpKTjV9/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold transition-colors shadow-xs">
+                <span>▶ デモ演奏を聴く</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/12MKegnU_KApMOwWuAxhXtMoHETb5JM8w?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold transition-colors">
+                <span>📄 譜面PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3曲目 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-5 sm:p-6">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm">3</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700">中盤：舞踊の躍動と透明感</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">演奏時間 7:40</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+                ダンス・セレスティアーレ <span class="text-sm font-medium text-slate-500">／ ロバート・シェルドン</span>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                「天上の舞踏」を意味するタイトルの通り、光が差し込むような透明感と、舞い上がるような躍動感に満ちた一曲。中間部の歌い上げるような美しい旋律と、終盤の喜びに満ちたクライマックスが魅力です。
+              </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+              <a href="https://drive.google.com/file/d/11aMz9d-o35ZtWz3mqw8vmplJGviETmmA/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-bold transition-colors shadow-xs">
+                <span>▶ デモ演奏を聴く</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1n1tk4coy1w0LjrNbMjgabbPxB-l9JypZ?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold transition-colors">
+                <span>📄 譜面PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4曲目（第一候補＋予備曲） -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-5 sm:p-6 space-y-5">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm">4</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700">中盤・第一候補：深い歌心と叙情</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">演奏時間 7:00</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+                パストラーレ（牧歌）≪改訂版≫ <span class="text-sm font-medium text-slate-500">／ 保科 洋</span>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                日本の吹奏楽界を代表する名曲。ゆったりとした美しい旋律の中に、日本的な叙情性とドラマチックなうねりが込められています。バンド全体の「歌う力」とハーモニーの美しさが試される、聴き応えのある一曲です。
+              </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+              <a href="https://drive.google.com/file/d/1bN2U2s-zEcLhQmk0TcbsoEQd7cxTwNUS/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-bold transition-colors shadow-xs">
+                <span>▶ デモ演奏を聴く</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1VDjKz7wkzAuCLJ9eiM7NuQZxYIGftXwG?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold transition-colors">
+                <span>📄 譜面PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 予備曲サブボックス -->
+          <div class="bg-amber-50/70 border border-amber-200/80 rounded-lg p-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-200/80 text-amber-900">4曲目・予備候補</span>
+                  <span class="text-xs font-semibold text-amber-800">演奏時間 4:22（パストラーレより2分38秒短縮）</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-900">
+                  デリー地方のアイルランド民謡 <span class="text-xs sm:text-sm font-medium text-slate-600">／ パーシー・グレインジャー</span>
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  <strong>【差し替え条件】</strong>第一候補は『パストラーレ』ですが、今後決まる第2部（ミュージカル）の曲数・ボリュームや全体の練習スケジュールがタイトになりそうな場合、よりコンパクトで壮大な感動を生む『ロンドンデリーの歌』の名編曲へ切り替える可能性があります。
+                </p>
+              </div>
+              <div class="flex flex-wrap sm:flex-nowrap gap-2 shrink-0">
+                <a href="https://drive.google.com/file/d/1gL2hVQ0yCpsmzIXiKxGF3RfYXuUgovwS/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-colors">
+                  <span>▶ 予備デモ演奏</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1z0KfbtcsT_fMkmZm5Y8g-HJ6m47_6ic7?usp=sharing" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-white hover:bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold transition-colors">
+                  <span>📄 予備譜面PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5曲目 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-5 sm:p-6">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-purple-600 text-white font-bold text-sm">5</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-purple-50 text-purple-700">終盤メイン：華麗なる4楽章フィナーレ</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">演奏時間 12:00</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+                吹奏楽の為の第3組曲「バレエの情景」 <span class="text-sm font-medium text-slate-500">／ アルフレッド・リード</span>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                優雅な「ファンファーレと序奏」、軽妙洒脱な「パ・ド・ドゥ」、コミカルな「道化師たちの踊り」、華麗で壮大な「総踊り（ギャロップ）」の4楽章構成。アークホールの豊かな響きを活かし、第2部の「ミュージカル」にも通じる舞台芸術の華やかさで第1部を締めくくります。
+              </p>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+              <a href="https://drive.google.com/file/d/1EDXfBAVgmSw4D_6O6bXFC83sbwlk2dlK/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs sm:text-sm font-bold transition-colors shadow-xs">
+                <span>▶ デモ演奏を聴く</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1B-2hE419lPs-mAMB20BiYQ5lAHO3kd1L?usp=sharing" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold transition-colors">
+                <span>📄 譜面PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション2：データで見るプログラム構成＆時間配分分析 -->
+    <section class="space-y-6">
+      <div class="border-l-4 border-indigo-600 pl-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+          2. プログラム時間配分・構成バランス分析
+        </h2>
+        <p class="mt-1 text-sm sm:text-base text-slate-600 leading-relaxed">
+          各曲の演奏時間データとステージ全体の役割分担を可視化しました。5分台の序曲で軽快にスタートし、7分台の中盤3曲で色彩と叙情を深め、最後に12分の大曲『バレエの情景』でピークを迎える理想的な時間曲線を描いています。
+        </p>
+      </div>
+
+      <!-- 2カラム グラフカード -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- 棒グラフ：曲別演奏時間比較 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+          <div class="mb-4">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">曲目別 演奏時間比較（分）</h3>
+            <p class="text-xs text-slate-500 mt-0.5">※4曲目は第一候補（7:00）と予備曲（4:22）の差を比較表示</p>
+          </div>
+          <div class="relative h-72 w-full">
+            <canvas id="durationBarChart"></canvas>
+          </div>
+        </div>
+
+        <!-- ドーナツグラフ：ステージ構成ステージ別時間比率 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+          <div class="mb-4">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">第1部 構成ブロック別 時間シェア（標準案）</h3>
+            <p class="text-xs text-slate-500 mt-0.5">序盤（1〜2曲目）・中盤（3〜4曲目）・終盤メイン（5曲目）の比率</p>
+          </div>
+          <div class="relative h-72 w-full flex items-center justify-center">
+            <canvas id="structureDoughnutChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ネクストアクション・決定事項リスト -->
+    <section class="space-y-6">
+      <div class="border-l-4 border-emerald-600 pl-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+          3. 今後のスケジュール・ネクストアクション
+        </h2>
+        <p class="mt-1 text-sm sm:text-base text-slate-600 leading-relaxed">
+          まずは目の前の12月6日（日）ウインターコンサートに全力を注ぎつつ、合間の時間や移動中にデモ演奏・譜面をチェックし、翌週からのスムーズな練習開始に備えましょう。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-600">
+                <th class="py-3.5 px-5">対象・担当</th>
+                <th class="py-3.5 px-5">アクション・決定事項</th>
+                <th class="py-3.5 px-5">時期・期限目安</th>
+                <th class="py-3.5 px-5">ステータス</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-sm">
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-4 px-5 font-bold text-slate-900 whitespace-nowrap">全団員</td>
+                <td class="py-4 px-5 text-slate-700">
+                  公開リンクから<strong>デモ演奏の試聴・譜面PDFの確認</strong>を行い、各曲の全体像と担当パートの難易度・要点を事前把握する
+                </td>
+                <td class="py-4 px-5 font-semibold text-blue-700 whitespace-nowrap">本日から随時</td>
+                <td class="py-4 px-5 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
+                    音源・譜面公開済
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-4 px-5 font-bold text-slate-900 whitespace-nowrap">全団員</td>
+                <td class="py-4 px-5 text-slate-700">
+                  <strong>ウインターコンサート本番</strong>の成功に向けて仕上げ・演奏
+                </td>
+                <td class="py-4 px-5 font-semibold text-slate-700 whitespace-nowrap">2026年12月6日(日)</td>
+                <td class="py-4 px-5 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">
+                    直近最優先
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-4 px-5 font-bold text-slate-900 whitespace-nowrap">全団員・合奏</td>
+                <td class="py-4 px-5 text-slate-700">
+                  <strong>第32回定期演奏会に向けた練習開始</strong>（事前予習をベースに第1部楽曲の合奏・分奏へ移行）
+                </td>
+                <td class="py-4 px-5 font-semibold text-emerald-700 whitespace-nowrap">2026年12月第2週〜</td>
+                <td class="py-4 px-5 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                    予定確定
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-4 px-5 font-bold text-slate-900 whitespace-nowrap">運営・選曲担当</td>
+                <td class="py-4 px-5 text-slate-700">
+                  <strong>第2部（テーマ：ミュージカル）の曲目決定</strong>、および全体練習負荷に応じた第1部4曲目（『パストラーレ』or 予備『デリー地方のアイルランド民謡』）の最終確定
+                </td>
+                <td class="py-4 px-5 font-semibold text-amber-700 whitespace-nowrap">第2部選曲確定時</td>
+                <td class="py-4 px-5 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                    調整・検討中
+                  </span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-4 px-5 font-bold text-slate-900 whitespace-nowrap">全団員</td>
+                <td class="py-4 px-5 text-slate-700">
+                  <strong>所沢北吹奏楽団 第32回定期演奏会 本番</strong>（於：所沢市民文化センターミューズ アークホール／13:30開演）
+                </td>
+                <td class="py-4 px-5 font-semibold text-purple-700 whitespace-nowrap">2027年5月9日(日)</td>
+                <td class="py-4 px-5 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-800">
+                    本番目標日
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
+    所沢北吹奏楽団 第32回定期演奏会 準備資料 ｜ 2027年5月9日（日）13:30開演
+  </footer>
+
+  <!-- Chart.js 描画スクリプト -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Chart.defaults.font.family = "'Noto Sans JP', sans-serif";
+      Chart.defaults.color = '#475569';
+
+      // 1. 棒グラフ：曲別演奏時間比較（分換算）
+      const barCtx = document.getElementById('durationBarChart').getContext('2d');
+      new Chart(barCtx, {
+        type: 'bar',
+        data: {
+          labels: [
+            '1. プロローグ・ワン',
+            '2. 呪文と踊り',
+            '3. ダンス・セレスティアーレ',
+            '4. パストラーレ（第一候補）',
+            '4(予). デリー地方の民謡',
+            '5. バレエの情景（全4楽章）'
+          ],
+          datasets: [{
+            label: '演奏時間（分）',
+            data: [5.50, 7.62, 7.67, 7.00, 4.37, 12.00],
+            backgroundColor: [
+              'rgba(37, 99, 235, 0.85)',
+              'rgba(37, 99, 235, 0.85)',
+              'rgba(79, 70, 229, 0.85)',
+              'rgba(79, 70, 229, 0.85)',
+              'rgba(217, 119, 6, 0.85)',
+              'rgba(147, 51, 234, 0.85)'
+            ],
+            borderRadius: 6,
+            barPercentage: 0.65
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const timeMap = ['5分30秒', '7分37秒', '7分40秒', '7分00秒', '4分22秒', '12分00秒'];
+                  return ` 演奏時間：${timeMap[ctx.dataIndex]}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              max: 14,
+              grid: { color: '#f1f5f9' },
+              ticks: {
+                callback: (val) => val + '分'
+              }
+            },
+            y: {
+              grid: { display: false },
+              ticks: { font: { weight: '600', size: 11 } }
+            }
+          }
+        }
+      });
+
+      // 2. ドーナツグラフ：構成ブロック別時間シェア（標準案：計39分47秒 = 2387秒）
+      const doughnutCtx = document.getElementById('structureDoughnutChart').getContext('2d');
+      new Chart(doughnutCtx, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            '序盤：幕開けと熱気（1〜2曲目 / 13:07）',
+            '中盤：躍動と歌心（3〜4曲目 / 14:40）',
+            '終盤メイン：バレエの情景（5曲目 / 12:00）'
+          ],
+          datasets: [{
+            data: [787, 880, 720],
+            backgroundColor: [
+              'rgba(37, 99, 235, 0.9)',
+              'rgba(79, 70, 229, 0.9)',
+              'rgba(147, 51, 234, 0.9)'
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 3,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '62%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                padding: 16,
+                usePointStyle: true,
+                pointStyle: 'circle',
+                font: { size: 11, weight: '600' }
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const total = 2387;
+                  const pct = ((ctx.parsed / total) * 100).toFixed(1);
+                  return ` ${ctx.label}（全体の ${pct}%）`;
+                }
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
