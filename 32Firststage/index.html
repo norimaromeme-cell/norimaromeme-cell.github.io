@@ -318,7 +318,7 @@
       </div>
     </section>
 
-    <!-- 4. ネクストアクション・決定事項リスト -->
+    <!-- 4. ネクストアクション・決定事項リスト（スマホ：カード表示 / PC：テーブル表示） -->
     <section class="space-y-6">
       <div class="border-l-4 border-emerald-600 pl-4">
         <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -329,15 +329,94 @@
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+      <!-- スマホ向けカードレイアウト（md未満で表示） -->
+      <div class="space-y-3 md:hidden">
+        <!-- Item 1 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-800">対象：全団員</span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800">音源・譜面公開済</span>
+          </div>
+          <p class="text-sm text-slate-800 leading-relaxed">
+            公開リンクから<strong>デモ演奏の試聴・譜面PDFの確認</strong>を行い、各曲の全体像と担当パートの難易度・要点を事前把握する
+          </p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-500">時期・期限目安</span>
+            <span class="font-bold text-blue-700">本日から随時</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-800">対象：全団員</span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">直近最優先</span>
+          </div>
+          <p class="text-sm text-slate-800 leading-relaxed">
+            <strong>ウインターコンサート本番</strong>の成功に向けて仕上げ・演奏
+          </p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-500">時期・期限目安</span>
+            <span class="font-bold text-slate-800">2026年12月6日(日)</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-800">対象：全団員・合奏</span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">予定確定</span>
+          </div>
+          <p class="text-sm text-slate-800 leading-relaxed">
+            <strong>第32回定期演奏会に向けた練習開始</strong>（事前予習をベースに第1部楽曲の合奏・分奏へ移行）
+          </p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-500">時期・期限目安</span>
+            <span class="font-bold text-emerald-700">2026年12月第2週〜</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-800">対象：運営・選曲担当</span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">調整・検討中</span>
+          </div>
+          <p class="text-sm text-slate-800 leading-relaxed">
+            <strong>第2部（テーマ：ミュージカル）の曲目決定</strong>、および全体練習負荷に応じた第1部4曲目（『パストラーレ』or 予備『デリー地方のアイルランド民謡』）の最終確定
+          </p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-500">時期・期限目安</span>
+            <span class="font-bold text-amber-700">第2部選曲確定時</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-100 text-slate-800">対象：全団員</span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-100 text-purple-800">本番目標日</span>
+          </div>
+          <p class="text-sm text-slate-800 leading-relaxed">
+            <strong>所沢北吹奏楽団 第32回定期演奏会 本番</strong>（於：所沢市民文化センターミューズ アークホール／13:30開演）
+          </p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-500">時期・期限目安</span>
+            <span class="font-bold text-purple-700">2027年5月9日(日)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PC向けテーブルレイアウト（md以上で表示） -->
+      <div class="hidden md:block bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-600">
-                <th class="py-3.5 px-5">対象・担当</th>
+                <th class="py-3.5 px-5 w-40">対象・担当</th>
                 <th class="py-3.5 px-5">アクション・決定事項</th>
-                <th class="py-3.5 px-5">時期・期限目安</th>
-                <th class="py-3.5 px-5">ステータス</th>
+                <th class="py-3.5 px-5 w-44">時期・期限目安</th>
+                <th class="py-3.5 px-5 w-36">ステータス</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100 text-sm">
